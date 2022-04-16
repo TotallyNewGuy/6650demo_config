@@ -21,7 +21,7 @@ dubbo:
   application:
     name: user-service
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://127.0.0.1:2182
   #    file: dubbo-registry/dubbo-registry.properties
   protocol:
     name: dubbo
