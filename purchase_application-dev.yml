@@ -1,0 +1,49 @@
+server:
+  #  port: ${PORT:6500}
+  port: 6800
+
+spring:
+  application:
+    name: purchase-service
+
+  datasource:
+    password: AppleMan922
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/userDB?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC%2D8
+
+dubbo:
+  application:
+    name: purchase-service
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  #    file: dubbo-registry/dubbo-registry.properties
+  protocol:
+    name: dubbo
+    port: 20884
+#  monitor.address: registry
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my-ds-project-demo
+  enable-auto-data-source-proxy: true
+
+  #  service:
+  #    vgroup-mapping.my-ds-project-demo: "default"
+  #    grouplist.seata-server: 127.0.0.1:8091
+
+  registry:
+    type: zk
+    zk:
+      application: ${spring.application.name}
+      server-addr: "127.0.0.1:2181"
+  #      sessionTimeout: 6000
+  #      connectTimeout: 2000
+
+  config:
+    type: zk
+    zk:
+      server-addr: "127.0.0.1:2181"
+#      connect-timeout: 2000
+#      session-timeout: 6000
