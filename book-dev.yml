@@ -1,4 +1,4 @@
-version: 111
+version: 101
 
 server:
   #  port: ${PORT:6600}
