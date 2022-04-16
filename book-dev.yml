@@ -49,4 +49,4 @@ seata:
       server-addr: "127.0.0.1:2181"
 #      connect-timeout: 2000
 #      session-timeout: 6000
-version: 200
+version: 300
