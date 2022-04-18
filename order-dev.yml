@@ -2,7 +2,7 @@ version: 402
 
 server:
   #  port: ${PORT:6700}
-  port: 6701
+  port: 6700
 
 spring:
   application:
@@ -25,7 +25,7 @@ dubbo:
   #    file: dubbo-registry/dubbo-registry.properties
   protocol:
     name: dubbo
-    port: 20889
+    port: 20882
 #  monitor.address: registry
 
 seata:
