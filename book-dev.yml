@@ -31,7 +31,7 @@ seata:
   enabled: true
   application-id: ${spring.application.name}
   tx-service-group: my-ds-project-demo
-  enable-auto-data-source-proxy: true
+  enable-auto-data-source-proxy: false
 
   #  service:
   #    vgroup-mapping.my-ds-project-demo: "default"
