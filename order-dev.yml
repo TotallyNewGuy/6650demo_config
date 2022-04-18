@@ -2,7 +2,7 @@ version: 402
 
 server:
   #  port: ${PORT:6700}
-  port: 6700
+  port: 6701
 
 spring:
   application:
