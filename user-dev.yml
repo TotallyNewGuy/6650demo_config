@@ -1,7 +1,7 @@
 version: 403
 
 server:
-#  port: ${PORT:6500}
+  #  port: ${PORT:6500}
   port: 6500
 
 spring:
@@ -32,7 +32,7 @@ seata:
   enabled: true
   application-id: ${spring.application.name}
   tx-service-group: my-ds-project-demo
-  enable-auto-data-source-proxy: true
+  enable-auto-data-source-proxy: false
 
   #  service:
   #    vgroup-mapping.my-ds-project-demo: "default"
@@ -52,4 +52,3 @@ seata:
       server-addr: "127.0.0.1:2181"
 #      connect-timeout: 2000
 #      session-timeout: 6000
-
