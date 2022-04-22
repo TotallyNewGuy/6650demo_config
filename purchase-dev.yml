@@ -12,13 +12,13 @@ spring:
     password: AppleMan922
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://127.0.0.1:3306/userDB?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC%2D8
+    url: jdbc:mysql://47.111.21.139:3306/userDB?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC%2D8
 
 dubbo:
   application:
     name: purchase-service
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://47.111.21.139:2181
   #    file: dubbo-registry/dubbo-registry.properties
   protocol:
     name: dubbo
@@ -33,19 +33,19 @@ seata:
 
   #  service:
   #    vgroup-mapping.my-ds-project-demo: "default"
-  #    grouplist.seata-server: 127.0.0.1:8091
+  #    grouplist.seata-server: 47.111.21.139:8091
 
   registry:
     type: zk
     zk:
       application: ${spring.application.name}
-      server-addr: "127.0.0.1:2181"
+      server-addr: "47.111.21.139:2181"
   #      sessionTimeout: 6000
   #      connectTimeout: 2000
 
   config:
     type: zk
     zk:
-      server-addr: "127.0.0.1:2181"
+      server-addr: "47.111.21.139:2181"
 #      connect-timeout: 2000
 #      session-timeout: 6000
