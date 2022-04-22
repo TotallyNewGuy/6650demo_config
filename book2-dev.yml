@@ -1,0 +1,53 @@
+version: 500
+
+server:
+  #  port: ${PORT:6600}
+  port: 6602
+
+spring:
+  application:
+    name: book-service
+
+  datasource:
+    password: AppleMan922
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://47.111.21.139:3306/stockDB?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC%2D8
+
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+
+dubbo:
+  application:
+    name: book-service
+  registry:
+    address: zookeeper://47.111.21.139:2183
+  protocol:
+    name: dubbo
+    port: 20885
+#  monitor.address: registry
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my-ds-project-demo
+  enable-auto-data-source-proxy: false
+
+  #  service:
+  #    vgroup-mapping.my-ds-project-demo: "default"
+  #    grouplist.seata-server: 47.111.21.139:8091
+
+  registry:
+    type: zk
+    zk:
+      application: ${spring.application.name}
+      server-addr: "47.111.21.139:2181"
+  #      sessionTimeout: 6000
+  #      connectTimeout: 2000
+
+  config:
+    type: zk
+    zk:
+      server-addr: "47.111.21.139:2181"
+#      connect-timeout: 2000
+#      session-timeout: 6000
