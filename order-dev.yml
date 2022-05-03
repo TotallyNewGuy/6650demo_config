@@ -1,4 +1,4 @@
-version: 410
+version: 2022
 
 server:
   #  port: ${PORT:6700}
